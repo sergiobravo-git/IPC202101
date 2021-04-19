@@ -21,8 +21,13 @@ int main(int argc, char * argv[])
 			float y1 = pow(-1*discriminante,0.5)/2/a;
 			float y2 = -y1;
 			cout<<"raices complejas:"<<endl;
-			cout<<"raiz compleja 1 ("<<x1<<",i"<<y1<<")"<<endl;
-			cout<<"raiz compleja 2 ("<<x2<<",i"<<y2<<")"<<endl;
+			if (y1<0)
+			cout<<"raiz compleja 1 ("<<x1<<", -j"<<-1*y1<<")"<<endl;
+			else cout<<"raiz compleja 1 ("<<x1<<", j"<<y1<<")"<<endl;
+			
+			if (y2<0)
+			cout<<"raiz compleja 2 ("<<x2<<", -j"<<-1*y2<<")"<<endl;
+			else cout<<"raiz compleja 2 ("<<x2<<", j"<<y2<<")"<<endl;
 		}
 		else {
 			float x1 = (-b+pow(discriminante,0.5))/2/a;
